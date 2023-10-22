@@ -1,0 +1,37 @@
+{
+  "name": "react-magic-marquee",
+  "description": "Virtualized marquee",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "url": "https://github.com/samuelweckstrom/react-magic-marquee",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/samuelweckstrom/react-magic-marquee"
+  },
+  "license": "MIT",
+  "keywords": [
+    "marquee",
+    "ticker",
+    "banner",
+    "decal",
+    "virtualized",
+    "scroller",
+    "scrolling",
+    "animated",
+    "react"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc -b",
+    "copy-assets": "ncp src/styles.css dist/styles.css",
+    "watch-assets": "chokidar 'src/styles.css' -c 'npm run copy-assets'"
+  },
+  "peerDependencies": {
+    "react": "^16.3 || ^17.0 || ^18.0"
+  }
+}
