@@ -1,0 +1,43 @@
+@keyframes marqueeAnimation {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+
+.marquee__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: var(--height);
+  justify-content: space-between;
+  overflow-x: hidden;
+  transform-origin: var(--transformOrigin);
+  transform: var(--transform);
+  width: var(--width);
+}
+
+.marquee__items {
+  animation-delay: var(--animationDelay);
+  animation-direction: var(--animationDirection);
+  animation-duration: var(--animationDuration);
+  animation-fill-mode: forwards;
+  animation-iteration-count: var(--animationIterationCount);
+  animation-name: marqueeAnimation;
+  animation-play-state: var(--animationPlayState);
+  animation-timing-function: linear;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: auto;
+  justify-content: space-around;
+  min-width: 100%;
+  text-rendering: optimizeLegibility;
+  width: auto;
+  will-change: transform;
+}
+
+.marquee__items>* {
+  transform: var(--transformItems);
+}
